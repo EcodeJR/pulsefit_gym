@@ -6,7 +6,7 @@ const Hero = () => {
 
     let BigText = useRef(null);
     useEffect(() => {
-        gsap.to(BigText.current, { x: 100, duration: 2 });
+        gsap.to(BigText.current, { opacity: 1, duration: 2 });
     }, [])
     
     return ( 
@@ -17,7 +17,7 @@ const Hero = () => {
             <img src={dumbbell} className='w-10 md:w-20 absolute top-5 md:top-10 right-4 animate-bounce' alt="A dumbbell" />
             <div className="flex flex-col items-center justify-between w-fit h-[90%] mt-10 md:h-fit relative">
                 
-                <h1  className="font-bold text-6xl md:text-8xl text-right tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-gray-100 to-gray-400">Bring Out <br /> The Best - <br /> Side Of <br /> You</h1>
+                <h1 ref={BigText} className="font-bold text-6xl md:text-8xl text-right tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-gray-100 to-gray-400 opacity-0">Bring Out <br /> The Best - <br /> Side Of <br /> You</h1>
                 <p className="text-xs md:text-sm text-left text-gray-400 md:absolute bottom-20 -right-[70%]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br /> Voluptas quod ratione illum iusto voluptatem excepturi, <br /> magni nihil odio deleniti ipsum ullam maiores corrupti..</p>
 
                 <div className='h-20 w-20 bg-transparent rounded-full flex items-center justify-center relative cursor-pointer'>
